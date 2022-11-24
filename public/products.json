@@ -1,0 +1,101 @@
+[
+    {
+        "c_id": 1,
+        "category": "Fantasy",
+        "logo": "",
+        "products": [
+            {
+                "p_id": "0182e0e58a1",
+                "name": "Harry Potter",
+                "image": "",
+                "resale price": 200,
+                "original price": 600,
+                "years of use": "4 years",
+                "condition": "Good",
+                "posted": "",
+                "seller's name": "Daniale Redcliff",
+                "location": "Dhaka",
+                "mobile number": "+880 123456"
+            },
+            {
+                "p_id": "0182e0e58a2",
+                "name": "",
+                "image": "",
+                "resale price": "",
+                "original price": "",
+                "years of use": "",
+                "condition": "",
+                "posted": "",
+                "seller's name": "",
+                "location": "",
+                "mobile number": ""
+            }
+        ]
+    },
+    {
+        "c_id": 2,
+        "category": "Thriller",
+        "logo": "",
+        "products": [
+            {
+                "p_id": "0182e0e58a3",
+                "name": "Harry Potter",
+                "image": "",
+                "resale price": 200,
+                "original price": 600,
+                "years of use": "4 years",
+                "condition": "Good",
+                "posted": "",
+                "seller's name": "Daniale Redcliff",
+                "location": "Dhaka",
+                "mobile number": "+880 123456"
+            },
+            {
+                "p_id": "0182e0e58a4",
+                "name": "",
+                "image": "",
+                "resale price": "",
+                "original price": "",
+                "years of use": "",
+                "condition": "",
+                "posted": "",
+                "seller's name": "",
+                "location": "",
+                "mobile number": ""
+            }
+        ]
+    },
+    {
+        "c_id": 3,
+        "category": "Science-Fiction",
+        "logo": "",
+        "products": [
+            {
+                "p_id": "0182e0e58a5",
+                "name": "Harry Potter",
+                "image": "",
+                "resale price": 200,
+                "original price": 600,
+                "years of use": "4 years",
+                "condition": "Good",
+                "posted": "",
+                "seller's name": "Daniale Redcliff",
+                "location": "Dhaka",
+                "mobile number": "+880 123456"
+            },
+            {
+                "p_id": "0182e0e58a6",
+                "name": "",
+                "image": "",
+                "resale price": "",
+                "original price": "",
+                "years of use": "",
+                "condition": "",
+                "posted": "",
+                "seller's name": "",
+                "location": "",
+                "mobile number": ""
+            }
+        ]
+    }
+]
