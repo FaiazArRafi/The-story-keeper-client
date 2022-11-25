@@ -1,5 +1,4 @@
 import React from 'react';
-import BookingModal from './BookingModal';
 
 const ProductsDetails = ({ product, category_name, setProd }) => {
     const { p_id, name, image, resale_price, original_price, years_of_use, condition, posted, sellers_name, location, mobile_number } = product;

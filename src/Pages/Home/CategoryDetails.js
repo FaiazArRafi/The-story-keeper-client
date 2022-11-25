@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 const CategoryDetails = ({ category }) => {
     const { _id, category_name } = category;
 
-
-
     return (
         <div >
             <div className="card w-96  bg-base-100 shadow-xl image-full">
