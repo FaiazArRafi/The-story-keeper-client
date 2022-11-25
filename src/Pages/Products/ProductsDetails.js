@@ -1,8 +1,8 @@
 import React from 'react';
+import BookingModal from './BookingModal';
 
-const ProductsDetails = ({ product, category_name }) => {
+const ProductsDetails = ({ product, category_name, setProd }) => {
     const { p_id, name, image, resale_price, original_price, years_of_use, condition, posted, sellers_name, location, mobile_number } = product;
-
     return (
         <div>
             <div className="card card-compact w-96 bg-base-100 shadow-xl my-8">
@@ -18,11 +18,15 @@ const ProductsDetails = ({ product, category_name }) => {
                     <p>Seller's Location: <span className='font-semibold text-lg'>{location}</span> </p>
                     <p>Contact number: <span className='font-semibold text-lg'>+{mobile_number}</span> </p>
                     <p>{posted}</p>
-                    <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Book Now</button>
+                    <div className="card-actions justify-center">
+                        <label
+                            htmlFor="booking-modal"
+                            onClick={() => setProd(product)}
+                            className="btn btn-primary text-white">Book Item</label>
                     </div>
                 </div>
             </div>
+
         </div>
     );
 };
