@@ -6,7 +6,7 @@ import useToken from '../../Hooks/useToken';
 
 const SignUp = () => {
     const [error, setError] = useState(null);
-
+    const [type, setType] = useState();
     const { createUser, updateUser } = useContext(AuthContext);
     const [createdUserEmail, setCreatedUserEmail] = useState('')
     const [token] = useToken(createdUserEmail);
@@ -24,7 +24,7 @@ const SignUp = () => {
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
-        // const type = form.option.value;
+        const userType = form.userType.value;
         console.log(name, email, password);
 
         createUser(email, password)
@@ -37,7 +37,7 @@ const SignUp = () => {
                 }
                 updateUser(userInfo)
                     .then(() => {
-                        saveUser(name, email);
+                        saveUser(name, email, userType);
                     })
                     .catch(err => console.log(err));
             })
@@ -47,8 +47,9 @@ const SignUp = () => {
             });
     }
 
-    const saveUser = (name, email) => {
-        const user = { name, email };
+    const saveUser = (name, email, userType) => {
+        const user = { name, email, userType };
+        console.log(user)
         fetch('http://localhost:5000/users', {
             method: 'POST',
             headers: {
@@ -70,11 +71,13 @@ const SignUp = () => {
                     <form onSubmit={handleSignUp} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 p-5">
                         <h1 className="text-5xl font-bold">Sign Up now!</h1>
                         <div className="card-body">
-                            <select className="select select-bordered w-full max-w-xs">
-                                <option disabled value>Select one</option>
-                                <option >Buyer</option>
-                                <option >Seller</option>
-                            </select>
+                            <div className='form-control'>
+                                <select id="fruits" defaultValue="Select type"
+                                    onChange={(e) => setType(e.target.value)} required>
+                                    <option value="Buyer">Buyer</option>
+                                    <option value="Seller">Seller</option>
+                                </select>
+                                <input type="text" name="userType" disabled value={type} placeholder="User type" className="input input-bordered input-xs w-full max-w-xs mt-2" /></div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
