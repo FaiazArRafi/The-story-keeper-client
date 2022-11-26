@@ -38,7 +38,6 @@ const AllSellers = () => {
 
     return (
         <div>
-            <h2 className="text-3xl">All Users</h2>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>
