@@ -25,8 +25,10 @@ const Header = () => {
                         {
                             user?.uid ?
 
-                                <button className='justify-center items-center flex hover:bg-base-300 px-3' onClick={handleLogOut}>Log Out</button>
-
+                                <>
+                                    <li><Link to="/dashboard">Dashboard</Link></li>
+                                    <button className='justify-center items-center flex hover:bg-base-300 px-3' onClick={handleLogOut}>Log Out</button>
+                                </>
                                 :
                                 <>
                                     <li><a href="/login">Login</a></li>

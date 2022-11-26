@@ -7,8 +7,7 @@ const PrivateRoute = ({ children }) => {
     const location = useLocation();
 
     if (loading) {
-        return <div className="text-center my-8">
-            <progress className="progress w-56"></progress></div>
+        return <progress className="progress w-56"></progress>
     }
 
     if (!user) {

@@ -1,13 +1,13 @@
 import React from 'react';
 
 const ProductsDetails = ({ product, category_name, setProd }) => {
-    const { p_id, name, image, resale_price, original_price, years_of_use, condition, posted, sellers_name, location, mobile_number } = product;
+    const { p_id, image, resale_price, original_price, years_of_use, condition, posted, sellers_name, location, mobile_number, product_name } = product;
     return (
         <div>
             <div className="card card-compact w-96 bg-base-100 shadow-xl my-8">
                 <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
                 <div className="card-body">
-                    <h2 className="card-title text-2xl">{name}</h2>
+                    <h2 className="card-title text-2xl">{product_name}</h2>
                     <p>Resale Price: $ <span className='text-3xl font-semibold text-red-600'>{resale_price}</span> Tk.</p>
                     <p>Original Price: $ <span className='font-semibold text-lg'>{original_price}</span> Tk.</p>
                     <p>Current conditon: <span className='font-semibold text-lg'>{condition}</span></p>

@@ -1,11 +1,13 @@
 import React, { useContext, useState } from 'react';
+import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 
 const SignUp = () => {
     const [error, setError] = useState(null);
 
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateUser } = useContext(AuthContext);
+    const [createdUserEmail, setCreatedUserEmail] = useState('')
 
     const handleSignUp = event => {
         event.preventDefault()
@@ -19,12 +21,37 @@ const SignUp = () => {
             .then(result => {
                 setError('')
                 form.reset();
+                toast.success('User Created Successfully.')
+                const userInfo = {
+                    displayName: name
+                }
+                updateUser(userInfo)
+                    .then(() => {
+                        saveUser(name, email);
+                    })
+                    .catch(err => console.log(err));
             })
             .catch(error => {
                 console.error(error)
                 setError(error.message)
             });
     }
+
+    const saveUser = (name, email) => {
+        const user = { name, email };
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                setCreatedUserEmail(email);
+            })
+    }
+
 
     return (
         <div>

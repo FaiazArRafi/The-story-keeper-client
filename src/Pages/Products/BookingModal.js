@@ -2,11 +2,9 @@ import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../Context/AuthProvider';
 
-const BookingModal = ({ product, prod, setProd }) => {
-    const { product_name, resale_price } = product;
-    console.log(prod)
+const BookingModal = ({ prod, setProd }) => {
     const { user } = useContext(AuthContext);
-    // const { product_name, resale_price } = prod;
+    const { product_name, resale_price } = prod;
 
     const handleBooking = event => {
         event.preventDefault();
@@ -53,7 +51,6 @@ const BookingModal = ({ product, prod, setProd }) => {
                 <div className="modal-box relative">
                     <label htmlFor="booking-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <form onSubmit={handleBooking} className='grid grid-cols-1 gap-3 mt-10'>
-                        {/* <h1>{product_name}</h1> */}
                         <label className="label">
                             <span className="label-text">Product name</span>
                         </label>
