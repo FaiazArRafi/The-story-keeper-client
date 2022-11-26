@@ -1,13 +1,22 @@
 import React, { useContext, useState } from 'react';
 import toast from 'react-hot-toast';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
+import useToken from '../../Hooks/useToken';
 
 const SignUp = () => {
     const [error, setError] = useState(null);
 
     const { createUser, updateUser } = useContext(AuthContext);
     const [createdUserEmail, setCreatedUserEmail] = useState('')
+    const [token] = useToken(createdUserEmail);
+    const navigate = useNavigate();
+
+    if (token) {
+        navigate('/');
+    }
+
+
 
     const handleSignUp = event => {
         event.preventDefault()
@@ -15,13 +24,14 @@ const SignUp = () => {
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
+        // const type = form.option.value;
         console.log(name, email, password);
 
         createUser(email, password)
             .then(result => {
                 setError('')
                 form.reset();
-                toast.success('User Created Successfully.')
+                toast.success('User Created Successfully.');
                 const userInfo = {
                     displayName: name
                 }
@@ -60,6 +70,11 @@ const SignUp = () => {
                     <form onSubmit={handleSignUp} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 p-5">
                         <h1 className="text-5xl font-bold">Sign Up now!</h1>
                         <div className="card-body">
+                            <select className="select select-bordered w-full max-w-xs">
+                                <option disabled value>Select one</option>
+                                <option >Buyer</option>
+                                <option >Seller</option>
+                            </select>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
