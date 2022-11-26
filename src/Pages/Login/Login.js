@@ -57,7 +57,7 @@ const Login = () => {
             <div className="hero mt-5 bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <form onSubmit={handleLogin} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 p-5">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
+                        <h1 className="text-5xl font-bold">Login</h1>
                         <div className='mx-auto mt-5'>
                             <button onClick={handleGoogleSignIn} className="btn btn-outline">Login with Google</button>
                         </div>

@@ -69,7 +69,7 @@ const SignUp = () => {
             <div className="hero mt-5 bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <form onSubmit={handleSignUp} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 p-5">
-                        <h1 className="text-5xl font-bold">Sign Up now!</h1>
+                        <h1 className="text-5xl font-bold">Sign Up</h1>
                         <div className="card-body">
                             <div className='form-control'>
                                 <select id="fruits" defaultValue="Select type"
@@ -77,7 +77,7 @@ const SignUp = () => {
                                     <option value="Buyer">Buyer</option>
                                     <option value="Seller">Seller</option>
                                 </select>
-                                <input type="text" name="userType" disabled value={type} placeholder="User type" className="input input-bordered input-xs w-full max-w-xs mt-2" /></div>
+                                <input type="text" name="userType" disabled value={type} defaultValue="Buyer" placeholder="User type" className="input input-bordered input-xs w-full max-w-xs mt-2" required /></div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>

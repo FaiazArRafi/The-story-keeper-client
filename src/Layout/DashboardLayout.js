@@ -19,7 +19,8 @@ const DashboardLayout = () => {
                         <div className="flex-none hidden lg:block">
                             <ul className="menu menu-horizontal">
                                 <li><Link to="/dashboard">My Orders</Link></li>
-                                <li><Link to="/dashboard/allusers">All users</Link></li>
+                                <li><Link to="/dashboard/allsellers">All Sellers</Link></li>
+                                <li><Link to="/dashboard/allbuyers">All Buyers</Link></li>
                             </ul>
                         </div>
                     </div>
