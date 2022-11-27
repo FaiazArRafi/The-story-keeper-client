@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ProductsDetails = ({ product, category_name, setProd }) => {
-    const { p_id, image, resale_price, original_price, years_of_use, condition, posted, sellers_name, location, mobile_number, product_name } = product;
+    const { _id, image, resale_price, original_price, years_of_use, condition, posted, sellers_name, sellers_location, mobile_number, product_name } = product;
     return (
         <div>
             <div className="card card-compact w-96 bg-base-100 shadow-xl my-8">
@@ -14,7 +14,7 @@ const ProductsDetails = ({ product, category_name, setProd }) => {
                     <p>Years of use:  <span className='font-semibold text-lg'>{years_of_use}</span></p>
 
                     <p>Seller's Name: <span className='font-semibold text-lg'>{sellers_name}</span> </p>
-                    <p>Seller's Location: <span className='font-semibold text-lg'>{location}</span> </p>
+                    <p>Seller's Location: <span className='font-semibold text-lg'>{sellers_location}</span> </p>
                     <p>Contact number: <span className='font-semibold text-lg'>+{mobile_number}</span> </p>
                     <p>{posted}</p>
                     <div className="card-actions justify-center">

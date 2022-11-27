@@ -15,7 +15,7 @@ const Products = () => {
             {
                 products.map(product =>
                     <ProductsDetails
-                        key={product.p_id}
+                        key={product._id}
                         product={product}
                         category_name={category_name}
                         setProd={setProd}

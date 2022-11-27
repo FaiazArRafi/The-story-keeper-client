@@ -5,7 +5,7 @@ const Category = () => {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/category')
+        fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => setCategories(data))
     }, [])
@@ -15,7 +15,7 @@ const Category = () => {
             {
                 categories.map(category =>
                     <CategoryDetails
-                        key={category.c_id}
+                        key={category._id}
                         category={category}
                     ></CategoryDetails>)
             }

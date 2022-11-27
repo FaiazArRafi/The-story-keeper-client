@@ -12,7 +12,7 @@ const CategoryDetails = ({ category }) => {
                     <h2 className="card-title text-2xl">{category_name}</h2>
                     <p>If a dog chews shoes whose shoes does he choose?</p>
                     <div className="card-actions justify-center">
-                        <Link to={`/category/${_id}`} className="btn btn-primary">{category_name}</Link>
+                        <Link to={`/products/${_id}`} className="btn btn-primary">{category_name}</Link>
                     </div>
                 </div>
             </div>
