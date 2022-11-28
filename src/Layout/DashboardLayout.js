@@ -1,4 +1,3 @@
-import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
@@ -26,17 +25,17 @@ const DashboardLayout = () => {
                         {
                             isAdmin ?
                                 <>
-                                    <li><Link to="/dashboard/allsellers">All Sellers</Link></li>
-                                    <li><Link to="/dashboard/allbuyers">All Buyers</Link></li>
+                                    <li><Link to="/dashboard/allsellers"><span className='text-xl font-bold mx-auto'>All Sellers</span></Link></li>
+                                    <li><Link to="/dashboard/allbuyers"><span className='text-xl font-bold mx-auto'>All Buyers</span></Link></li>
                                 </>
                                 :
                                 isSeller ?
                                     <>
-                                        <li><Link to="/dashboard/addproduct" className="btn btn-outline btn-info">Add a Product</Link></li>
-                                        <li><Link to="/dashboard/myproducts" className="btn btn-outline btn-info">My Products</Link></li>
+                                        <li><Link to="/dashboard/addproduct" className="btn btn-outline btn-info"><span className='text-xl font-bold mx-auto'>Add a Product</span></Link></li>
+                                        <li><Link to="/dashboard/myproducts" className="btn btn-outline btn-info"><span className='text-xl font-bold mx-auto'>My Products</span></Link></li>
                                     </>
                                     :
-                                    <li><Link to="/dashboard/myorders">My Orders</Link></li>
+                                    <li><Link to="/dashboard/myorders" className='bg-sky-300'><span className='text-xl font-bold mx-auto'>My Orders</span></Link></li>
 
                         }
 

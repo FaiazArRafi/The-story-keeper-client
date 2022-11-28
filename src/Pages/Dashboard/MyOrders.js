@@ -50,7 +50,8 @@ const MyOrders = () => {
                             <th>Image</th>
                             <th>Title</th>
                             <th>Price</th>
-                            <th>Pay</th>
+                            <th>Payment</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -60,7 +61,8 @@ const MyOrders = () => {
                                 <td>{booking.image}</td>
                                 <td>{booking.product_name}</td>
                                 <td>{booking.price}</td>
-                                <td><button onClick={() => handleDelete(booking._id)} className='btn btn-xs btn-error'>Delete</button></td>
+                                <td><button className='btn btn-xs btn-warning px-4 text-white'>Pay</button></td>
+                                <td><button onClick={() => handleDelete(booking._id)} className='btn btn-xs bg-red-600 border-0 text-white px-4'>Delete</button></td>
                             </tr>)
                         }
                     </tbody>
