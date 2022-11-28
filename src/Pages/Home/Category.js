@@ -11,7 +11,7 @@ const Category = () => {
     }, [])
 
     return (
-        <div className='grid grid-cols-3'>
+        <div className='grid grid-cols-3 mb-7'>
             {
                 categories.map(category =>
                     <CategoryDetails
