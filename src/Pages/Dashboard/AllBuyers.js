@@ -20,7 +20,7 @@ const AllBuyers = () => {
     });
 
     const handleDelete = id => {
-        const proceed = window.confirm('Are you sure, you want to delete this review ?');
+        const proceed = window.confirm('Are you sure, you want to delete this buyer ?');
         if (proceed) {
             fetch(`http://localhost:5000/users/allbuyers${id}`, {
                 method: 'DELETE'

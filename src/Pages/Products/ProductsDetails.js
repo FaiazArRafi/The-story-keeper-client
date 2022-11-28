@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ProductsDetails = ({ product, category_name, setProd }) => {
-    const { _id, image, resale_price, original_price, years_of_use, condition, posted, sellers_name, sellers_location, mobile_number, product_name } = product;
+    const { image, resale_price, original_price, years_of_use, condition, posted, sellers_name, sellers_location, mobile_number, product_name } = product;
     return (
         <div>
             <div className="card card-compact w-96 bg-base-100 shadow-xl my-8">
