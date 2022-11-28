@@ -15,10 +15,10 @@ const Header = () => {
 
 
     return (
-        <div className="navbar bg-cyan-200">
+        <div className="navbar bg-cyan-200 flex flex-wrap lg:flex-nowrap">
             <div className="flex-1">
                 <img src={logo} alt="" className='w-12' />
-                <a href="/" className="btn btn-ghost normal-case text-3xl font-semibold">The Story Keeper</a>
+                <a href="/" className="btn btn-ghost normal-case text-3xl font-semibold ">The Story Keeper</a>
             </div>
             <div className="flex-none">
                 <ul className="menu menu-horizontal p-0">
