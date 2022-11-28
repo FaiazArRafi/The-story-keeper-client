@@ -25,13 +25,13 @@ const DashboardLayout = () => {
                         {
                             isAdmin ?
                                 <>
-                                    <li><Link to="/dashboard/allsellers"><span className='text-xl font-bold mx-auto'>All Sellers</span></Link></li>
+                                    <li><Link to="/dashboard/allsellers"><span className='text-xl font-bold mx-auto my-5'>All Sellers</span></Link></li>
                                     <li><Link to="/dashboard/allbuyers"><span className='text-xl font-bold mx-auto'>All Buyers</span></Link></li>
                                 </>
                                 :
                                 isSeller ?
                                     <>
-                                        <li><Link to="/dashboard/addproduct" className="btn btn-outline btn-info"><span className='text-xl font-bold mx-auto'>Add a Product</span></Link></li>
+                                        <li><Link to="/dashboard/addproduct" className="btn btn-outline btn-info my-3"><span className='text-xl font-bold mx-auto'>Add a Product</span></Link></li>
                                         <li><Link to="/dashboard/myproducts" className="btn btn-outline btn-info"><span className='text-xl font-bold mx-auto'>My Products</span></Link></li>
                                     </>
                                     :

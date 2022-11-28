@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# Getting Started with "The Story Keeper"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This website was created with [Create React App]. It's design was created with tailwind CSS and daisy-UI component library. Vercel and MongoDB  is used in the backend. The live site deployed in Firebase. 
 
-## Available Scripts
+## Available Features
 
-In the project directory, you can run:
+* It is a online based used books resale website.
+* User can buy and sell any books in this website. User can also enjoy our blog.
+* In the website, currently there are three types of books genre available. User can buy or sell any fantasy, thriller or Science-Fiction genre books in the website.
 
-### `npm start`
+### Services
+ 
+* In home page, user can see a advertisement of best books by readers. User will see category of books. If user wants to see what books are available then clicking on the genre button will take the user to category per id route.
+* In products page, user can see all available books. If user want to order one or multiple book then pressing 'Book Item' button will book the specific item for user.
+* In the Dashboard page, user can see his total booked item. Then if user wants to remove any order then he can remove it by clicking 'delete'. Cliking on 'Pay' button will take the user to payment process.
+* If the user is a Seller then in Dashboard he can add books in 'Add a Product' page. User can see his added books in 'My Products' page.
+* If the user is Admin then Admin can see all buyers and all sellers in Dashboard. Admin can delete any buyers or sellers as Admin see fit.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Blog
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+In Blog, user can read four questions with answers about React state, Prototypical Inheritance, Unit test & comaprision of a few libraries and framework.
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You can see live site from here: [Live site](https://resale-client-95e96.web.app/)

@@ -5,9 +5,9 @@ const ProductsDetails = ({ product, category_name, setProd }) => {
     return (
         <div>
             <div className="card card-compact w-96 bg-base-100 shadow-xl my-8">
-                <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+                <figure><img src={image} alt="Shoes" className='h-72' /></figure>
                 <div className="card-body">
-                    <h2 className="card-title text-2xl">{product_name}</h2>
+                    <h2 className="card-title text-blue-800 text-3xl">{product_name}</h2>
                     <p>Resale Price: $ <span className='text-3xl font-semibold text-red-600'>{resale_price}</span> Tk.</p>
                     <p>Original Price: $ <span className='font-semibold text-lg'>{original_price}</span> Tk.</p>
                     <p>Current conditon: <span className='font-semibold text-lg'>{condition}</span></p>

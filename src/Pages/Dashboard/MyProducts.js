@@ -45,9 +45,9 @@ const MyProducts = () => {
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Image</th>
                             <th>Product Name</th>
                             <th>Price</th>
+                            <th>Status</th>
                             <th>Delete</th>
                         </tr>
                     </thead>
@@ -55,11 +55,10 @@ const MyProducts = () => {
                         {
                             bookings.map((booking, i) => <tr key={booking._id}>
                                 <th>{i + 1}</th>
-                                <td>{booking.image}</td>
                                 <td>{booking.product_name}</td>
                                 <td>{booking.resale_price}</td>
-                                <td><button className='btn btn-sm btn-danger'>Pay</button></td>
-                                <td><button onClick={() => handleDelete(booking._id)} className='btn btn-xs btn-error'>Delete</button></td>
+                                <td><button className='btn btn-sm btn-danger'>Available</button></td>
+                                <td><button onClick={() => handleDelete(booking._id)} className='btn btn-sm btn-error px-4'>Delete</button></td>
                             </tr>)
                         }
                     </tbody>

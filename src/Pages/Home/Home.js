@@ -8,7 +8,7 @@ import ex1 from '../../asset/ex1.webp'
 const Home = () => {
     return (
         <div>
-            <div className="container carousel rounded my-5 ">
+            <div className="container carousel rounded my-14 ">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img alt="" src={caro1} className="w-full" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -33,7 +33,7 @@ const Home = () => {
             </div>
 
             <div className='my-8'>
-                <h1 className='mt-5 mb-2 text-5xl font-semibold text-blue-800 mb-5'>Category of Bookes</h1>
+                <h1 className='mt-5 mb-2 text-4xl font-semibold  mb-5'>Category of Bookes</h1>
                 <Category></Category>
             </div>
             <div className='my-16'>
