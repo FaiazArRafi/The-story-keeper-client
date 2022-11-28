@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { AuthContext } from '../../Context/AuthProvider';
 
 const MyOrders = () => {
@@ -8,7 +9,7 @@ const MyOrders = () => {
 
     const url = `http://localhost:5000/booked?email=${user?.email}`;
 
-    const { data: bookings = [] } = useQuery({
+    const { data: bookings = [], refetch } = useQuery({
         queryKey: ['booked', user?.email],
         queryFn: async () => {
             const res = await fetch(url, {
@@ -20,6 +21,23 @@ const MyOrders = () => {
             return data;
         }
     })
+
+    const handleDelete = id => {
+        const proceed = window.confirm('Are you sure, you want to delete your booking ?');
+        if (proceed) {
+            fetch(`http://localhost:5000/booked/${id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount > 0) {
+                        toast('Deleted successfully !!!');
+                        refetch();
+                    }
+                })
+        }
+    }
 
 
     return (
@@ -42,7 +60,7 @@ const MyOrders = () => {
                                 <td>{booking.image}</td>
                                 <td>{booking.product_name}</td>
                                 <td>{booking.price}</td>
-                                <td>Pay</td>
+                                <td><button onClick={() => handleDelete(booking._id)} className='btn btn-xs btn-error'>Delete</button></td>
                             </tr>)
                         }
                     </tbody>
