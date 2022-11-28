@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import toast from 'react-hot-toast';
-import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 import useToken from '../../Hooks/useToken';
 
@@ -15,8 +15,6 @@ const SignUp = () => {
     if (token) {
         navigate('/');
     }
-
-
 
     const handleSignUp = event => {
         event.preventDefault()
@@ -50,7 +48,7 @@ const SignUp = () => {
     const saveUser = (name, email, userType) => {
         const user = { name, email, userType };
         console.log(user)
-        fetch('http://localhost:5000/users', {
+        fetch('https://resale-server-ruby.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

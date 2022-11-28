@@ -7,7 +7,7 @@ const MyOrders = () => {
 
     const { user } = useContext(AuthContext);
 
-    const url = `http://localhost:5000/booked?email=${user?.email}`;
+    const url = `https://resale-server-ruby.vercel.app/booked?email=${user?.email}`;
 
     const { data: bookings = [], refetch } = useQuery({
         queryKey: ['booked', user?.email],
@@ -25,7 +25,7 @@ const MyOrders = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete your booking ?');
         if (proceed) {
-            fetch(`http://localhost:5000/booked/${id}`, {
+            fetch(`https://resale-server-ruby.vercel.app/booked/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

@@ -26,7 +26,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/products/:id',
                 element: <PrivateRoute><Products></Products></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+                loader: ({ params }) => fetch(`https://resale-server-ruby.vercel.app/products/${params.id}`)
             },
             {
                 path: '/blog',

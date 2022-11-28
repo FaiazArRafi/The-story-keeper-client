@@ -1,19 +1,13 @@
 import { useQuery } from '@tanstack/react-query';
-import React, { useState } from 'react';
+import React from 'react';
 import toast from 'react-hot-toast';
 
 const AllBuyers = () => {
-    const [reviews, setReviews] = useState([]);
-
-    // const closeModal = () => {
-    //     setDeletingDoctor(null);
-    // }
-
 
     const { data: users = [], refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/users/allbuyers');
+            const res = await fetch('https://resale-server-ruby.vercel.app/users/allbuyers');
             const data = await res.json();
             return data;
         }
@@ -22,7 +16,7 @@ const AllBuyers = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete this buyer ?');
         if (proceed) {
-            fetch(`http://localhost:5000/users/allbuyers${id}`, {
+            fetch(`https://resale-server-ruby.vercel.app/users/allbuyers${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -63,17 +57,6 @@ const AllBuyers = () => {
                     </tbody>
                 </table>
             </div>
-            {/* {
-                deletingDoctor && <alert
-                    title={`Are you sure you want to delete?`}
-                    message={`If you delete ${deletingDoctor.name}. It cannot be undone.`}
-                    successAction={handleDeleteDoctor}
-                    successButtonName="Delete"
-                    modalData={deletingDoctor}
-                    closeModal={closeModal}
-                >
-                </alert>
-            } */}
         </div>
     );
 };

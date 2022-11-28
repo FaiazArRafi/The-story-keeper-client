@@ -3,17 +3,11 @@ import React, { useState } from 'react';
 import toast from 'react-hot-toast';
 
 const AllSellers = () => {
-    const [reviews, setReviews] = useState([]);
-
-    // const closeModal = () => {
-    //     setDeletingDoctor(null);
-    // }
-
 
     const { data: users = [], refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/users/allsellers');
+            const res = await fetch('https://resale-server-ruby.vercel.app/users/allsellers');
             const data = await res.json();
             return data;
         }
@@ -22,7 +16,7 @@ const AllSellers = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete this seller ?');
         if (proceed) {
-            fetch(`http://localhost:5000/users/allsellers${id}`, {
+            fetch(`https://resale-server-ruby.vercel.app/users/allsellers${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -63,17 +57,6 @@ const AllSellers = () => {
                     </tbody>
                 </table>
             </div>
-            {/* {
-                deletingDoctor && <alert
-                    title={`Are you sure you want to delete?`}
-                    message={`If you delete ${deletingDoctor.name}. It cannot be undone.`}
-                    successAction={handleDeleteDoctor}
-                    successButtonName="Delete"
-                    modalData={deletingDoctor}
-                    closeModal={closeModal}
-                >
-                </alert>
-            } */}
         </div>
     );
 };

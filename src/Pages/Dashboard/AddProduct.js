@@ -41,7 +41,7 @@ const AddProduct = () => {
 
         }
 
-        fetch('http://localhost:5000/myproducts', {
+        fetch('https://resale-server-ruby.vercel.app/myproducts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -64,10 +64,7 @@ const AddProduct = () => {
 
     return (
         <div className="flex justify-center">
-            {/* The button to open modal */}
             <label htmlFor="my-modal-3" className="btn  mt-5">Add a Product</label>
-
-            {/* Put this part before </body> tag */}
             <input type="checkbox" id="my-modal-3" className="modal-toggle" />
             <div className="modal">
                 <div className="modal-box relative">

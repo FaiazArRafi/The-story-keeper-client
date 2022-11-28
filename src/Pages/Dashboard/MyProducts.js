@@ -6,7 +6,7 @@ import { AuthContext } from '../../Context/AuthProvider';
 const MyProducts = () => {
     const { user } = useContext(AuthContext);
 
-    const url = `http://localhost:5000/myproducts?email=${user?.email}`;
+    const url = `https://resale-server-ruby.vercel.app/myproducts?email=${user?.email}`;
 
     const { data: bookings = [], refetch } = useQuery({
         queryKey: ['myproducts', user?.email],
@@ -24,7 +24,7 @@ const MyProducts = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete this product ?');
         if (proceed) {
-            fetch(`http://localhost:5000/myproducts/${id}`, {
+            fetch(`https://resale-server-ruby.vercel.app/myproducts/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

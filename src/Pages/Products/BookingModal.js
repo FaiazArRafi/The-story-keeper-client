@@ -23,7 +23,7 @@ const BookingModal = ({ prod, setProd }) => {
             location
         }
 
-        fetch('http://localhost:5000/booked', {
+        fetch('https://resale-server-ruby.vercel.app/booked', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
